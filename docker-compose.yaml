@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    env_file: 
+      - .env
+    environment:
+      - DB_HOST=brain-agriculture
+      - DB_PORT=5432
+    depends_on:
+      - brain-agriculture
+    command: >
+      sh -c "
+      npm run typeorm -- -d ./build/database/data-source.js migration:run &&
+      node build/index.js
+      "
+      
+  brain-agriculture:
+    image: postgres:15
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

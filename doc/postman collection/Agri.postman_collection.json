@@ -1,0 +1,511 @@
+{
+	"info": {
+		"_postman_id": "7e90c8c4-729b-4b53-bf44-80e483a236dc",
+		"name": "Agri",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40552715"
+	},
+	"item": [
+		{
+			"name": "Farmer",
+			"item": [
+				{
+					"name": "farmer create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Eliardo Marini\",\r\n    \"document\": \"12345678912349\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/farmer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"farmer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "farmer get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/farmer?page=1&size=10&document=12345678901&name=Eliardo Marini",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"farmer"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "document",
+									"value": "12345678901"
+								},
+								{
+									"key": "name",
+									"value": "Eliardo Marini"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "farmer get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/farmer/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"farmer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "farmer delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/farmer/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"farmer",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "farmer put",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Name updated\",\r\n    \"document\": \"12332123369789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/farmer/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"farmer",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Farm",
+			"item": [
+				{
+					"name": "farm create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Fazenda Marini FM\",\r\n    \"totalArea\": 30,\r\n    \"totalPreservationArea\": 22.4,\r\n    \"totalCultivableArea\": 7.6,\r\n    \"city\": \"Passo Fundo\",\r\n    \"state\": \"RJ\",\r\n    \"farmerId\": 154\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/farm",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"farm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "farm update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"FM\",\r\n    \"totalArea\": 10,\r\n    \"totalPreservationArea\": 2.4,\r\n    \"totalCultivableArea\": 7.6,\r\n    \"city\": \"muliterno\",\r\n    \"state\": \"RS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/farm/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"farm",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "farm get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/farm",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"farm"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "state",
+									"value": "RS",
+									"disabled": true
+								},
+								{
+									"key": "city",
+									"value": "Passo Fundo",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "Fazenda Marini",
+									"disabled": true
+								},
+								{
+									"key": "farmerId",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "farm summary qtd and area group by state",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/farm/summary-by-state",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"farm",
+								"summary-by-state"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "farm get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/farm/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"farm",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "farm get delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/farm/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"farm",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "farm summary qtd and area Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/farm/summary",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"farm",
+								"summary"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Harvest",
+			"item": [
+				{
+					"name": "harvest get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/harvest/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"harvest",
+								"1"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "harvest get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/harvest",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"harvest"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "culture",
+									"value": "Soja",
+									"disabled": true
+								},
+								{
+									"key": "year",
+									"value": "2023",
+									"disabled": true
+								},
+								{
+									"key": "farmId",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "harvest create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"culture\": \"Soja\",\r\n    \"year\": \"2023\",\r\n    \"description\": \"Soja intacta\",\r\n    \"farmId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/harvest",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"harvest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "harvest update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"culture\": \"Soja\",\r\n    \"year\": \"2023\",\r\n    \"description\": \"Soja intacta updated\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/harvest/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"harvest",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "harvest delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"culture\": \"Soja\",\r\n    \"year\": \"2023\",\r\n    \"description\": \"Soja intacta updated\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/harvest/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"harvest",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
