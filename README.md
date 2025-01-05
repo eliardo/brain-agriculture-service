@@ -4,8 +4,8 @@ Backend service Brain agriculture
 Used to manager famers, farms and harvests.
 
 ## Running local
-
-Set configs to connect on postgresql database, service port and log level
+#### .env
+Set configs to connect on postgresql database, service port and log level 
 
 ##### Installation
 
@@ -45,7 +45,7 @@ $ docker-compose down
 $ docker-compose up --build
 ```
 
-## Testes
+## Testes unitários
 ```plaintext
 # Unitários
 $ yarn test:unit
@@ -54,10 +54,24 @@ $ yarn test:unit
 $ yarn test:unit:coverage
 ```
 
+## Testes Integrados
+```plaintext
+# integrados
+$ yarn test:integrated
+
+# integrados com report de cobertura
+$ yarn test:integrated:coverage
+```
+### Configs to run in
+.env.test
+
 ## Swagger
 
 http://localhost:3000/api-docs/
 
+
+## Collections Postman in
+doc/postman collection
 
 ## Technologies
 
